@@ -1,0 +1,18 @@
+.DesktopNavbar {
+  border: 1px solid black;
+  ul {
+    display: flex;
+    gap: 2vw;
+    a {
+      text-decoration: none;
+      li {
+        list-style-type: none;
+        font-size: 1.5vw;
+        transition: color ease 0.2s;
+        &:hover {
+          color: #8283be;
+        }
+      }
+    }
+  }
+}

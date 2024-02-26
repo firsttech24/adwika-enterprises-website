@@ -1,0 +1,125 @@
+.Header {
+  border: 1px solid black;
+  .headerOne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5vw 2vw;
+    background-color: #8283be;
+    address {
+      color: #fff;
+      /* border: 1px solid black; */
+    }
+    .rightContainer {
+      /* border: 1px solid black; */
+      display: flex;
+      align-items: center;
+      gap: 4vw;
+      p {
+        color: #fff;
+      }
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+        svg {
+          font-size: 1.3vw;
+          background-color: #fff;
+          padding: 0.1vw;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .headerTwo {
+    border: 1px solid black;
+    background-color: #f1f1f1;
+    padding: 1vw 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .imgContainer {
+      border: 1px solid black;
+      width: 13vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbarContainer {
+      .desktopNavbar {
+        display: flex;
+      }
+      .mobileNavbar {
+        display: none;
+      }
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .Header {
+    border: 1px solid black;
+    .headerOne {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5vw 2vw;
+      background-color: #8283be;
+      address {
+        color: #fff;
+        /* border: 1px solid black; */
+      }
+      .rightContainer {
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        gap: 4vw;
+        p {
+          color: #fff;
+        }
+        .socialMedia {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1vw;
+          svg {
+            font-size: 1.3vw;
+            background-color: #fff;
+            padding: 0.1vw;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .headerTwo {
+      border: 1px solid black;
+      background-color: #f1f1f1;
+      padding: 1vw 2vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .imgContainer {
+        border: 1px solid black;
+        width: 13vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navbarContainer {
+        .desktopNavbar {
+          display: none;
+        }
+        .mobileNavbar {
+          display: flex;
+        }
+        svg {
+          display: flex;
+        }
+      }
+    }
+  }
+}
