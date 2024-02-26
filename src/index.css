@@ -1,9 +1,14 @@
+/** @format */
+
+:root {
+  --primary-color: #8283be;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  border: 1px solid black;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: rgb(56, 56, 56);
+  font-size: 14px;
 }
