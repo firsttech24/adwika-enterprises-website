@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./header.module.css";
 import { FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -9,6 +9,8 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  const [isShowSidebar, setIsShowSidebar] = useState(false);
+
   return (
     <div className={styles.Header}>
       <div className={styles.headerOne}>
@@ -38,9 +40,12 @@ export default function Header() {
           </div>
 
           <div className={styles.mobileNavbar}>
-            <MobileNavbar />
+            <MobileNavbar
+              setIsShowSidebar={setIsShowSidebar}
+              isShowSidebar={isShowSidebar}
+            />
           </div>
-          <FaBarsStaggered />
+          <FaBarsStaggered onClick={() => setIsShowSidebar(true)} />
         </div>
       </div>
     </div>
