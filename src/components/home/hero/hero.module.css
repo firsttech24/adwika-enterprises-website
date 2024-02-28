@@ -1,0 +1,21 @@
+.Hero {
+  border: 1px solid black;
+  .slideContainer {
+    .slideParent {
+    }
+    .extraDiv {
+    }
+  }
+
+  .hoverContainer {
+    display: none;
+    h1 {
+    }
+    button {
+    }
+    .ctaContainer {
+      .cta {
+      }
+    }
+  }
+}
