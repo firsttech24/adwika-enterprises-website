@@ -1,6 +1,6 @@
 /** @format */
 
-.AboutPage {
+.About {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
   display: flex;
   gap: 5rem;
   padding: 2rem 4rem;
-  width: 80%;
+  width: 90%;
   .leftSecond {
     display: flex;
     flex-direction: column;
