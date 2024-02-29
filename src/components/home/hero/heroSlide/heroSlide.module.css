@@ -2,6 +2,7 @@
   border: 1px solid black;
   .swiper {
     border: 1px solid black;
+    position: relative;
     .swiperSlide {
       .imgContainer {
         display: flex;
@@ -18,9 +19,33 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.2);
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 1;
         }
       }
+    }
+
+    .slideLeft,
+    .slideRight {
+      position: absolute;
+      top: 45%;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        background-color: #fff;
+        font-size: 3vw;
+        color: red;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    .slideLeft {
+      left: 5%;
+    }
+    .slideRight {
+      right: 5%;
     }
   }
 }
