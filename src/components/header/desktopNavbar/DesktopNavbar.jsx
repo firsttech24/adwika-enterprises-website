@@ -12,16 +12,16 @@ export default function DesktopNavbar() {
         <Link to={"/about"}>
           <li>About</li>
         </Link>
-        <Link to={"/about"}>
+        <Link to={"/services"}>
           <li>Services</li>
         </Link>
-        <Link to={"/about"}>
+        <Link to={"/projects"}>
           <li>Projects</li>
         </Link>
-        <Link to={"/about"}>
+        <Link to={"/testimonials"}>
           <li>Testimonials</li>
         </Link>
-        <Link to={"/about"}>
+        <Link to={"/contact"}>
           <li>Contact</li>
         </Link>
       </ul>

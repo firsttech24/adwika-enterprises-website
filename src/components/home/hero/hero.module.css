@@ -1,19 +1,31 @@
 .Hero {
   border: 1px solid black;
   .slideContainer {
+    position: relative;
     .slideParent {
     }
-    .extraDiv {
-    }
-  }
-
-  .hoverContainer {
-    display: none;
-    h1 {
-    }
-    button {
+    .hoverContainer {
+      /* display: none; */
+      position: absolute;
+      top: 10%;
+      left: 35%;
+      border: 1px solid black;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      h1 {
+        font-size: 4vw;
+        color: #fff;
+      }
+      button {
+        background-color: #8283be;
+      }
     }
     .ctaContainer {
+      border: 1px solid black;
       .cta {
       }
     }
