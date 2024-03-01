@@ -22,18 +22,16 @@ export default function Hero() {
             <button className="btn1">DISCOVER NOW</button>
           </Link>
         </div>
+      </div>
 
-        {/* ctas */}
-        <div className={styles.ctaContainer}>
-          {ctasArr?.map((cta, index) => (
-            <Link key={index} className={styles.cta}>
-              <div className={styles.icon}>
-                <cta.icon />
-              </div>
-              <strong>{cta.title}</strong>
-            </Link>
-          ))}
-        </div>
+      {/* ctas */}
+      <div className={styles.ctaContainer}>
+        {ctasArr?.map((cta, index) => (
+          <Link key={index} className={styles.cta}>
+            <cta.icon />
+            <strong>{cta.title}</strong>
+          </Link>
+        ))}
       </div>
     </section>
   );

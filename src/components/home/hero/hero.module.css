@@ -1,5 +1,6 @@
 .Hero {
   border: 1px solid black;
+  position: relative;
   .slideContainer {
     position: relative;
     .slideParent {
@@ -24,9 +25,36 @@
         background-color: #8283be;
       }
     }
-    .ctaContainer {
-      border: 1px solid black;
-      .cta {
+  }
+
+  .ctaContainer {
+    /* border: 10px solid red; */
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    position: absolute;
+    bottom: -9vw;
+    left: 19%;
+    z-index: 10;
+    .cta {
+      width: 18vw;
+      border: 0.2vw solid #8283be;
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2vw;
+      padding: 2vw;
+      border-radius: 2vw;
+      text-decoration: none;
+      color: #212121;
+      svg {
+        font-size: 4vw;
+        color: #8283be;
+      }
+      strong {
+        font-size: 1.6vw;
       }
     }
   }
