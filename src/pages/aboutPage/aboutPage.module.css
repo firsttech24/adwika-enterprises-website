@@ -1,0 +1,120 @@
+/** @format */
+
+.AboutPage {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+  color: var(--font-color);
+  gap: 5rem;
+}
+
+.abt {
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+
+  .abtFirstRow {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .abtSecondRow {
+    display: flex;
+    width: 100%;
+    .img {
+      max-width: 40%;
+      max-height: 40vh;
+    }
+    .text {
+      width: 60%;
+      padding: 0 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      h4 {
+        color: var(--primary-color);
+        font-size: 2rem;
+      }
+      p {
+        text-align: justify;
+        font-size: 1rem;
+      }
+    }
+  }
+  .abtThirdRow {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    .img {
+      width: 40%;
+    }
+    .text {
+      width: 60%;
+      padding: 2rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      h4 {
+        color: var(--primary-color);
+        font-size: 2rem;
+      }
+      p {
+        text-align: justify;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.why {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-size: 2.5rem;
+  }
+  .whybox {
+    display: flex;
+    width: 90%;
+    padding: 3rem;
+    justify-content: space-between;
+    .card {
+      width: 20%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border: 2px solid var(--primary-color);
+      border-radius: 5px;
+      background-color: var(--primary-color);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      span {
+        display: flex;
+        justify-content: center;
+        svg {
+          font-size: 3rem !important;
+          color: #fff;
+        }
+      }
+      p {
+        color: #fff;
+        text-align: justify;
+      }
+    }
+  }
+}
