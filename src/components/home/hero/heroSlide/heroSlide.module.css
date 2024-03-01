@@ -36,16 +36,21 @@
       svg {
         background-color: #fff;
         font-size: 3vw;
-        color: red;
         border-radius: 50%;
         cursor: pointer;
       }
     }
     .slideLeft {
       left: 5%;
+      svg {
+        color: #212121;
+      }
     }
     .slideRight {
       right: 5%;
+      svg {
+        color: #8283be;
+      }
     }
   }
 }

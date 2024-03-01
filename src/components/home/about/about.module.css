@@ -1,6 +1,7 @@
 /** @format */
 
 .About {
+  margin-top: 10vw;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
