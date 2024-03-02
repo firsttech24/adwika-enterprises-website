@@ -36,3 +36,16 @@ h1 {
   color: #fff;
   cursor: pointer;
 }
+
+.btn2 {
+  font-size: 2vw;
+  border: 0.2vw solid #212121;
+  color: #212121;
+  cursor: pointer;
+  padding: 0.5vw 0.8vw;
+  transition: all ease 0.2s;
+  &:hover {
+    background-color: #8283be;
+    color: #fff;
+  }
+}
