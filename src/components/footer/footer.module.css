@@ -1,0 +1,82 @@
+.Footer {
+  margin-top: 15vw;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  position: relative;
+  background-color: #8283be;
+  padding: 2vw;
+  .footerOne {
+    border: 0.2vw solid #212121;
+    background-color: #f0f0f0;
+    width: 80%;
+    padding: 3vw 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: -7.5vw;
+    left: 10%;
+    border-radius: 1vw;
+    background-image: url("./../../assets/footer/texture1.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 -0.1vw 0.8vw rgba(0, 0, 0, 0.3);
+    p {
+      font-size: 3vw;
+      font-weight: 600;
+    }
+    button {
+    }
+  }
+  .footerTwo {
+    margin-top: 10vw;
+    /* border: 1px solid white; */
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+
+    strong {
+      font-size: 1.5vw;
+    }
+
+    .footerLogoContainer {
+      /* border: 1px solid white; */
+      width: 20%;
+      padding: 2vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      .footerLogo {
+        width: 15vw;
+      }
+    }
+    .explore {
+      /* border: 1px solid white; */
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      padding: 2vw;
+    }
+    .footerContact {
+      /* border: 1px solid white; */
+      padding: 2vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      .socialMedia {
+        display: flex;
+        gap: 1.5vw;
+        svg {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+  .footerThree {
+    color: #eee;
+  }
+}

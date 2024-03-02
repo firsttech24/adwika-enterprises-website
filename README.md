@@ -1,8 +1,12 @@
-# React + Vite
+HOME PAGE =>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. HEADER
+2. HERO SECTION
+3. ABOUT SECTION
+4. WHAT WE DO SECTION (SERVICES)
+5. CLIENT'S LOGO SLIDER
+6. PROJECT SECTION
+7. TESTIMONIAL SECTION
+8. FOOTER
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ABOUT PAGE =>
