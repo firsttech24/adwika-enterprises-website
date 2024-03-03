@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+
 import {
   HomePage,
   AboutPage,
@@ -38,6 +40,9 @@ export default function App() {
         <Route path={"/admin"} element={<Admin/>} />
 
       </Routes>
+
+      {/* footer */}
+      <Footer />
     </BrowserRouter>
   );
 }

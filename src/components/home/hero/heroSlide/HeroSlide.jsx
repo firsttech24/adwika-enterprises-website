@@ -48,7 +48,7 @@ export default function HeroSlide() {
         ))}
 
         <div className={styles.slideLeft} onClick={navigateLeft}>
-          <FaArrowAltCircleLeft style={{ color: "red" }} />
+          <FaArrowAltCircleLeft />
         </div>
 
         <div className={styles.slideRight} onClick={navigateRight}>
