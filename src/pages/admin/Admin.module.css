@@ -1,0 +1,41 @@
+/** @format */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-top: 5rem;
+  margin: auto;
+}
+
+.addbox {
+  display: flex;
+  height: 6rem;
+  background-color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  cursor: pointer;
+  svg {
+    font-size: 5rem;
+    color: #fff;
+  }
+  span {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.projectBox {
+  display: flex;
+  padding: 2rem;
+  width: 70%;
+  gap: 3rem;
+  .projectLeft{
+    width: 40%;
+  }
+  .projectRight{
+    padding: 1rem 2rem;
+  }
+}
