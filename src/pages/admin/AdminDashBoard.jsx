@@ -11,6 +11,7 @@ import {
   DocumentReference,
   doc,
 } from "firebase/firestore";
+import StickyHeadTable from "./StickyHeadTable.jsx";
 
 const AdminDashBoard = () => {
   let [projectAdd, setProjectAdd] = useState(false);
@@ -40,25 +41,7 @@ const AdminDashBoard = () => {
             onClick={() => setProjectAdd(true)}>
             <Add /> <span>Add New Project</span>
           </div>
-          {projects.map((item, ind) => (
-            <div
-              key={ind}
-              className={styles.projectBox}>
-              <div className={styles.projectLeft}>
-                <img
-                  src={item.coverImage}
-                  alt=""
-                />
-              </div>
-              <div className={styles.projectRight}>
-                <h2>{item.projectName}</h2>
-                <h2>{item.location}</h2>
-                <h2>{item.timeline}</h2>
-                <h2>{item.description}</h2>
-                <h2>See more</h2>
-              </div>
-            </div>
-          ))}
+          <StickyHeadTable projects={projects}/>
         </div>
       )}
     </div>
