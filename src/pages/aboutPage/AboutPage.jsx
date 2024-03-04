@@ -3,8 +3,11 @@
 import React from "react";
 import styles from "./aboutPage.module.css";
 import ChecklistRtlIcon from "@mui/icons-material/ChecklistRtl";
+import { team } from "./team.js";
+import { Call, Instagram, LinkedIn, Mail } from "@mui/icons-material";
 
 export default function AboutPage() {
+  console.log(team);
   return (
     <div className={styles.AboutPage}>
       <div className={styles.abt}>
@@ -135,9 +138,33 @@ export default function AboutPage() {
         </div>
       </div>
       <div className={styles.team}>
-        
+        <h1>MEET OUR TEAM</h1>
+        <div className={styles.teamArea}>
+          {team.map((mem, ind) => {
+            return (
+              <div
+                key={ind}
+                className={styles.teamCard}>
+                <div className={styles.teamMain}>
+                  <div className={styles.teamProfile}>
+                    <img src={mem.profile} />
+                  </div>
+                  <h2>{mem.name}</h2>
+                  <h3>{mem.position}</h3>
+                  <div className={styles.social}>
+                    <Instagram />
+                    <LinkedIn />
+                    <Call />
+                    <Mail />
+                  </div>
+                  {/* <p>{mem.desc}</p> */}
+                  {/* <span>{mem.fun}</span> */}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <div>// pattern</div>
     </div>
   );
 }
