@@ -3,6 +3,7 @@
 .AboutPage {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 8rem;
   color: var(--font-color);
   gap: 5rem;
@@ -102,7 +103,9 @@
       border: 2px solid var(--primary-color);
       border-radius: 5px;
       background-color: var(--primary-color);
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
       span {
         display: flex;
         justify-content: center;
@@ -116,5 +119,84 @@
         text-align: justify;
       }
     }
+  }
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+    /* color: var(--primary-color); */
+    text-align: center;
+    font-weight: 600;
+    margin: 2rem;
+  }
+}
+.teamArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  width: 95%;
+  .teamCard {
+    display: flex;
+    gap: 1.2rem;
+    padding: 3rem;
+    padding-bottom: 0;
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    .teamMain {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      .teamProfile {
+        width: 140px;
+        height: 140px;
+        img {
+          border-radius: 50%;
+        }
+      }
+      .social {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        border-top: 1px solid gray;
+        padding: 0.8rem;
+        svg {
+          font-size: 1.8rem;
+          cursor: pointer;
+        }
+      }
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+    }
+    p {
+      padding: 0.5rem 1rem;
+    }
+    span {
+      border-top: 0.8px solid gray;
+      text-align: center;
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.teamCard:hover {
+  background-color: var(--primary-color);
+  color: #fff !important;
+  h3 {
+    color: #fff;
   }
 }

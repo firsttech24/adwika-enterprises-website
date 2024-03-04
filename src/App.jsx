@@ -11,6 +11,7 @@ import {
   TestimonialsPage,
   ContactPage,
 } from "./pages";
+import Admin from "./pages/admin/Admin";
 
 export default function App() {
   return (
@@ -35,6 +36,9 @@ export default function App() {
 
         {/* contact */}
         <Route path={"/contact"} element={<ContactPage />} />
+
+        <Route path={"/admin"} element={<Admin/>} />
+
       </Routes>
 
       {/* footer */}
