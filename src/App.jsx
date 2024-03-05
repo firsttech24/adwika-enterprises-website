@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
@@ -12,6 +14,9 @@ import {
   ContactPage,
 } from "./pages";
 import Admin from "./pages/admin/Admin";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashBoard from "./pages/admin/AdminDashBoard";
+import AddProjectForm from "./pages/admin/AddProjectForm";
 
 export default function App() {
   return (
@@ -20,25 +25,57 @@ export default function App() {
 
       <Routes>
         {/* home page */}
-        <Route path={"/"} element={<HomePage />} />
+        <Route
+          path={"/"}
+          element={<HomePage />}
+        />
 
         {/* about page */}
-        <Route path={"/about"} element={<AboutPage />} />
+        <Route
+          path={"/about"}
+          element={<AboutPage />}
+        />
 
         {/* services */}
-        <Route path={"/services"} element={<ServicesPage />} />
+        <Route
+          path={"/services"}
+          element={<ServicesPage />}
+        />
 
         {/* projects */}
-        <Route path={"/projects"} element={<ProjectsPage />} />
+        <Route
+          path={"/projects"}
+          element={<ProjectsPage />}
+        />
 
         {/* testimonials */}
-        <Route path={"/testimonials"} element={<TestimonialsPage />} />
+        <Route
+          path={"/testimonials"}
+          element={<TestimonialsPage />}
+        />
 
         {/* contact */}
-        <Route path={"/contact"} element={<ContactPage />} />
+        <Route
+          path={"/contact"}
+          element={<ContactPage />}
+        />
 
-        <Route path={"/admin"} element={<Admin/>} />
-
+        <Route
+          path={"/admin"}
+          element={<Admin />}>
+          <Route
+            path="login"
+            element={AdminLogin}
+          />
+          <Route
+            path="dashboard"
+            element={AdminDashBoard}
+          />
+          <Route
+            path="addproject"
+            element={AddProjectForm}
+          />
+        </Route>
       </Routes>
 
       {/* footer */}
