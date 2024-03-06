@@ -4,6 +4,8 @@ import About from "../../components/home/about/About";
 import Hero from "../../components/home/hero/Hero";
 import WhatWeDo from "../../components/home/whatWeDo/WhatWeDo";
 import LogoSlider from "../../components/home/logoSlider/LogoSlider";
+import Portfolio from "../../components/home/portfolio/Portfolio";
+import Testimonials from "../../components/home/testimonials/Testimonials";
 
 export default function HomePage() {
   return (
@@ -19,6 +21,12 @@ export default function HomePage() {
 
       {/* client's logo slider */}
       <LogoSlider />
+
+      {/* portfolio section */}
+      <Portfolio />
+
+      {/* testimonials */}
+      <Testimonials />
     </div>
   );
 }
