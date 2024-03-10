@@ -7,7 +7,6 @@ import { team } from "./team.js";
 import { Call, Instagram, LinkedIn, Mail } from "@mui/icons-material";
 
 export default function AboutPage() {
-  console.log(team);
   return (
     <div className={styles.AboutPage}>
       <div className={styles.abt}>
@@ -26,6 +25,7 @@ export default function AboutPage() {
             <img
               src="/aboutImages/about_nrw2.jpg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div className={styles.text}>
@@ -59,6 +59,7 @@ export default function AboutPage() {
             <img
               src="/aboutImages/about_nrw3.png"
               alt=""
+              loading="lazy"
             />
           </div>
           <div className={styles.text}>
@@ -147,7 +148,10 @@ export default function AboutPage() {
                 className={styles.teamCard}>
                 <div className={styles.teamMain}>
                   <div className={styles.teamProfile}>
-                    <img src={mem.profile} />
+                    <img
+                      src={mem.profile}
+                      loading="lazy"
+                    />
                   </div>
                   <h2>{mem.name}</h2>
                   <h3>{mem.position}</h3>

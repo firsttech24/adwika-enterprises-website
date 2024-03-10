@@ -13,6 +13,7 @@ import {
 } from "firebase/firestore";
 import StickyHeadTable from "./StickyHeadTable.jsx";
 
+
 const AdminDashBoard = () => {
   let [projectAdd, setProjectAdd] = useState(false);
   let [projects, setProjects] = useState([]);
@@ -25,12 +26,12 @@ const AdminDashBoard = () => {
       id: val.id,
     }));
     setProjects(alldata);
-    console.log(alldata);
   };
 
   useEffect(() => {
     getProjectsFromFirebase();
   }, []);
+
   return (
     <div className={styles.dashboard}>
       {projectAdd && <AddProjectForm setProjectAdd={setProjectAdd} />}
@@ -41,7 +42,7 @@ const AdminDashBoard = () => {
             onClick={() => setProjectAdd(true)}>
             <Add /> <span>Add New Project</span>
           </div>
-          <StickyHeadTable projects={projects}/>
+          <StickyHeadTable projects={projects} />
         </div>
       )}
     </div>

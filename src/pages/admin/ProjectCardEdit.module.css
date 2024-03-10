@@ -1,0 +1,184 @@
+/** @format */
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+}
+
+.projectCardEdit {
+  width: 80%;
+  margin: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 3rem 1rem;
+}
+
+.formHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  h1 {
+    font-size: 3rem;
+  }
+  .submitButton {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+.coverSection {
+  display: flex;
+  gap: 5rem;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  .coverImage {
+    min-height: 150px;
+    max-height: 250px;
+    max-width: 350px;
+  }
+}
+
+.uploadSection {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  .inputfielduploadsection {
+    display: none;
+  }
+  .replaceCoverImageButton,
+  .removeCoverImageButton {
+    height: 3rem;
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .replaceCoverImageButton:hover,
+  .removeCoverImageButton:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+.projectDetails {
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 4rem;
+  padding: 1rem 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  label {
+    min-width: 150px;
+    font-size: 1.2rem;
+  }
+  input {
+    max-width: 70%;
+    min-width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease-in-out;
+  }
+}
+
+.descriptionSection {
+  padding: 1rem 2rem;
+  gap: 4rem;
+  display: flex;
+  label {
+    min-width: 150px;
+    font-size: 1.2rem;
+  }
+}
+
+.textArea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  min-height: 200px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease-in-out;
+  resize: none;
+}
+
+.fileInput {
+  margin-top: 10px;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}
+
+.gallerySection {
+  display: flex;
+  flex-direction: column;
+  .galleryContainer {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+}
+
+.galleryLabel {
+  font-size: 3rem !important;
+  font-weight: 600;
+  margin-left: 4rem;
+}
+
+.galleryItemWrapper {
+  width: 250px;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .galleryItem {
+    width: 100%;
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .deleteButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgb(252, 83, 83);
+    border: 3px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
