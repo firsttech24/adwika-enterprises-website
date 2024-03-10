@@ -11,6 +11,7 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { Fullscreen } from "@mui/icons-material";
 import { Edit } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const tablestyle = {
   marginTop: "3rem",
@@ -38,6 +39,13 @@ const columns = [
     align: "right",
     format: (value) => value.toLocaleString("en-US"),
   },
+  { id: "description", label: "Descrition", minWidth: 100, maxWidth: 200 },
+  { id: "coverImageBool", label: "Cover Image", minWidth: 100 },
+  {
+    id: "galleryPhotosLength",
+    label: "Gallery Photos",
+    minWidth: 100,
+  },
   //   {
   //     id: "description",
   //     label: "Description",
@@ -47,14 +55,43 @@ const columns = [
   //   },
 ];
 
-function createData(projectName, location, timeline, description) {
-  return { projectName, location, timeline, description };
+function createData(
+  projectName,
+  location,
+  timeline,
+  description,
+  coverImage,
+  galleryPhotos,
+  id
+) {
+  const coverImageBool = coverImage ? "yes" : "no";
+  const galleryPhotosLength = galleryPhotos.length;
+  return {
+    projectName,
+    location,
+    timeline,
+    description,
+    coverImageBool,
+    galleryPhotosLength,
+    galleryPhotos,
+    coverImage,
+    id,
+  };
 }
 
 export default function StickyHeadTable({ projects }) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   let [projectRows, setProjectRows] = React.useState([]);
+
+  const navigate = useNavigate();
+
+  const handleFullScreen = (row) => {
+    navigate("/admin/project", { state: row });
+  };
+  const handleEdit = (row) => {
+    navigate("/admin/project/edit", { state: row });
+  };
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -70,8 +107,17 @@ export default function StickyHeadTable({ projects }) {
         description,
         galleryPhotos,
         timeline,
+        id,
       } = item;
-      const newRow = createData(projectName, location, timeline);
+      const newRow = createData(
+        projectName,
+        location,
+        timeline,
+        description,
+        coverImage,
+        galleryPhotos,
+        id
+      );
       rows.push(newRow);
     });
     setProjectRows(rows);
@@ -125,7 +171,12 @@ export default function StickyHeadTable({ projects }) {
                       );
                     })}
                     <TableCell style={cellstyle}>
-                      <Edit /> <Fullscreen />
+                      <Edit
+                        onClick={() => {
+                          handleEdit(row);
+                        }}
+                      />{" "}
+                      <Fullscreen onClick={() => handleFullScreen(row)} />
                     </TableCell>
                   </TableRow>
                 );

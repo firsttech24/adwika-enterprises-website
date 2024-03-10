@@ -17,6 +17,8 @@ import Admin from "./pages/admin/Admin";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminDashBoard from "./pages/admin/AdminDashBoard";
 import AddProjectForm from "./pages/admin/AddProjectForm";
+import ProjectCard_ad from "./pages/admin/ProjectCard_ad";
+import ProjectCardEdit from "./pages/admin/ProjectCardEdit";
 
 export default function App() {
   return (
@@ -65,15 +67,23 @@ export default function App() {
           element={<Admin />}>
           <Route
             path="login"
-            element={AdminLogin}
+            element={<AdminLogin />}
           />
           <Route
             path="dashboard"
-            element={AdminDashBoard}
+            element={<AdminDashBoard />}
           />
           <Route
             path="addproject"
-            element={AddProjectForm}
+            element={<AddProjectForm />}
+          />
+          <Route
+            path="project"
+            element={<ProjectCard_ad />}
+          />
+          <Route
+            path="project/edit"
+            element={<ProjectCardEdit />}
           />
         </Route>
       </Routes>

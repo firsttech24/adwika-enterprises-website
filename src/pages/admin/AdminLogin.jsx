@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import { useNavigate } from "react-router-dom";
 
-const AdminLogin = ({setLogin}) => {
+const AdminLogin = ({}) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -21,8 +23,8 @@ const AdminLogin = ({setLogin}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLogin(true);
-    console.log("Login data:", formData);
+    window.localStorage.setItem("adwikaenterprisescom@23", formData);
+    navigate("/admin/dashboard");
   };
 
   return (
@@ -30,7 +32,7 @@ const AdminLogin = ({setLogin}) => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      height="100vh"
+      height="60vh"
       width="100vw">
       <div>
         <h2>Admin Login</h2>
@@ -43,6 +45,7 @@ const AdminLogin = ({setLogin}) => {
             name="username"
             value={formData.username}
             onChange={handleChange}
+            required
           />
 
           <TextField
@@ -54,6 +57,7 @@ const AdminLogin = ({setLogin}) => {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            required
           />
 
           <Button

@@ -1,3 +1,4 @@
+/** @format */
 
 :root {
   --primary-color: #3498db;
@@ -12,16 +13,16 @@
   width: 60%;
   max-width: 600px;
   margin: 4rem auto;
-  }
+}
 
-label {
+.label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-input,
-textarea {
+.input,
+.textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -31,16 +32,16 @@ textarea {
   transition: border-color 0.3s ease-in-out;
 }
 
-input[type="file"] {
-  margin-top: 10px;
-}
-
-input:focus,
-textarea:focus {
+.input:focus,
+.textarea:focus {
   border-color: var(--primary-color);
 }
 
-button {
+.fileInput {
+  margin-bottom: 10px;
+}
+
+.submitButton {
   background-color: var(--primary-color);
   color: #fff;
   padding: 12px 20px;
@@ -49,8 +50,4 @@ button {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: var(--secondary-color);
 }
