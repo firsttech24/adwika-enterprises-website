@@ -62,12 +62,11 @@ const ProjectCardEdit = () => {
       galleryPhotos: location.state.galleryPhotos,
     };
     setData(newData);
-    console.log(location.state);
   }, [location.state]);
 
-  const handleReplaceCoverImage = () => {
-    if (data.coverImage) handleRemoveCoverImage();
-    handleImageChange();
+  const handleReplaceCoverImage = (e) => {
+    if (data.coverImage) handleRemoveCoverImage(e);
+    handleImageChange(e);
   };
 
   const handleRemoveCoverImage = () => {
@@ -83,7 +82,6 @@ const ProjectCardEdit = () => {
   };
 
   const handleImageChange = async (e) => {
-    console.log("atat");
     const { name, value, files } = e.target;
     setLoading(true);
     if (data.projectName.trim() == "") {
@@ -151,11 +149,15 @@ const ProjectCardEdit = () => {
   };
 
   const handleSubmit = async () => {
-    setLoading(true);
-    const docRef = doc(db, "project", data.id);
-    await updateDoc(docRef, data);
-    setLoading(false);
-    navigate("/admin/dashboard");
+    let pass = window.prompt("Enter Password");
+    if (pass == "adwika@@") {
+      setLoading(true);
+      const docRef = doc(db, "project", data.id);
+      await updateDoc(docRef, data);
+      setLoading(false);
+      navigate("/admin/dashboard");
+    }
+    else alert("incorrect password");
   };
 
   return (
