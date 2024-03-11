@@ -8,7 +8,6 @@ import { db } from "../../config/firebase.js";
 import {
   getDocs,
   collection,
-  DocumentReference,
   doc,
 } from "firebase/firestore";
 import StickyHeadTable from "./StickyHeadTable.jsx";
