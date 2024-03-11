@@ -24,6 +24,7 @@ const Card = ({ item }) => {
         }
         alt=""
         onError={handleImageError}
+        loading="lazy"
       />
       <div className={styles.cardContent}>
         <div className={styles.cardTitle}>{item.projectName}</div>
