@@ -21,7 +21,9 @@ const AddProjectForm = ({ setProjectAdd }) => {
     coverImage: null,
     description: "",
     galleryPhotos: [],
-    timeline: "",
+    scope: "",
+    category : "",
+    designedBy : ""
   });
 
   const handleChange = (e) => {
@@ -130,15 +132,45 @@ const AddProjectForm = ({ setProjectAdd }) => {
 
         <label
           className={styles.label}
-          htmlFor="timeline">
-          Timeline:
+          htmlFor="scope">
+          Scope Of Work:
         </label>
         <input
           className={styles.input}
           type="text"
-          id="timeline"
-          name="timeline"
-          value={formData.timeline}
+          id="scope"
+          name="scope"
+          value={formData.scope}
+          onChange={handleChange}
+          required
+        />
+
+        <label
+          className={styles.label}
+          htmlFor="category">
+          Category:
+        </label>
+        <input
+          className={styles.input}
+          type="text"
+          id="category"
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+          required
+        />
+
+        <label
+          className={styles.label}
+          htmlFor="designedBy">
+          Designed By:
+        </label>
+        <input
+          className={styles.input}
+          type="text"
+          id="designedBy"
+          name="designedBy"
+          value={formData.designedBy}
           onChange={handleChange}
           required
         />

@@ -11,7 +11,7 @@ import { db } from "../../config/firebase.js";
 const ProjectCard_ad = ({}) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { coverImage, projectName, timeline, description, galleryPhotos, id } =
+  const { coverImage, projectName, scope, category, designedBy, description, galleryPhotos, id } =
     location.state;
 
   const deleteFirebase = async () => {
@@ -59,8 +59,10 @@ const ProjectCard_ad = ({}) => {
         </div>
         <div className={styles.projectInfo}>
           <h3>Name - {projectName}</h3>
-          <p>Timeline - {timeline}</p>
+          <p>Scope of Work - {scope}</p>
           <p>Location - {location.state.location}</p>
+          <p>Category - {category}</p>
+          <p>Designed By - {designedBy}</p>
           <p>description - {description}</p>
         </div>
       </div>

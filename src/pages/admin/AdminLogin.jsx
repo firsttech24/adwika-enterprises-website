@@ -23,8 +23,10 @@ const AdminLogin = ({}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.localStorage.setItem("adwikaenterprisescom@23", formData);
-    navigate("/admin/dashboard");
+    if(formData.username == "bikash" && formData.password == "bikash@12"){
+      window.localStorage.setItem("adwikaenterprisescom@23", formData);
+      navigate("/admin/dashboard");
+    }
   };
 
   return (

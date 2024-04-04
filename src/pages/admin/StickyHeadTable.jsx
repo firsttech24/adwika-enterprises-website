@@ -32,13 +32,9 @@ const cellstyle = {
 const columns = [
   { id: "projectName", label: "Name", minWidth: 170 },
   { id: "location", label: "Location", minWidth: 100 },
-  {
-    id: "timeline",
-    label: "Timeline",
-    minWidth: 170,
-    align: "right",
-    format: (value) => value.toLocaleString("en-US"),
-  },
+  { id: "scope", label: "Scope Of Work", minWidth: 100 },
+  { id: "category", label: "Category", minWidth: 100 },
+  { id: "designedBy", label: "Designed By", minWidth: 100 },
   { id: "description", label: "Descrition", minWidth: 100, maxWidth: 200 },
   { id: "coverImageBool", label: "Cover Image", minWidth: 100 },
   {
@@ -58,7 +54,9 @@ const columns = [
 function createData(
   projectName,
   location,
-  timeline,
+  scope,
+  category,
+  designedBy,
   description,
   coverImage,
   galleryPhotos,
@@ -69,7 +67,9 @@ function createData(
   return {
     projectName,
     location,
-    timeline,
+    scope,
+    category,
+    designedBy,
     description,
     coverImageBool,
     galleryPhotosLength,
@@ -106,13 +106,17 @@ export default function StickyHeadTable({ projects }) {
         coverImage,
         description,
         galleryPhotos,
-        timeline,
+        scope,
+        category,
+        designedBy,
         id,
       } = item;
       const newRow = createData(
         projectName,
         location,
-        timeline,
+        scope,
+        category,
+        designedBy,
         description,
         coverImage,
         galleryPhotos,

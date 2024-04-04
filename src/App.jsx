@@ -27,40 +27,35 @@ export default function App() {
 
       <Routes>
         {/* home page */}
-        <Route
+        {/* <Route
           path={"/"}
           element={<HomePage />}
         />
 
-        {/* about page */}
         <Route
           path={"/about"}
           element={<AboutPage />}
         />
 
-        {/* services */}
         <Route
           path={"/services"}
           element={<ServicesPage />}
         />
 
-        {/* projects */}
         <Route
           path={"/projects"}
           element={<ProjectsPage />}
         />
 
-        {/* testimonials */}
         <Route
           path={"/testimonials"}
           element={<TestimonialsPage />}
         />
 
-        {/* contact */}
         <Route
           path={"/contact"}
           element={<ContactPage />}
-        />
+        /> */}
 
         <Route
           path={"/admin"}
