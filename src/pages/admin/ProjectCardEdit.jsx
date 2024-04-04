@@ -45,7 +45,9 @@ const ProjectCardEdit = () => {
     id: "",
     projectName: "",
     location: "",
-    timeline: "",
+    scope: "",
+    category : "",
+    designedBy : "",
     description: "",
     coverImage: "",
     galleryPhotos: [],
@@ -56,7 +58,9 @@ const ProjectCardEdit = () => {
       id: location.state.id,
       projectName: location.state.projectName,
       location: location.state.location,
-      timeline: location.state.timeline,
+      scope: location.state.scope,
+      category: location.state.category,
+      designedBy: location.state.designedBy,
       description: location.state.description,
       coverImage: location.state.coverImage,
       galleryPhotos: location.state.galleryPhotos,
@@ -212,12 +216,34 @@ const ProjectCardEdit = () => {
           </div>
 
           <div className={styles.inputGroup}>
-            <label htmlFor="timeline">Timeline:</label>
+            <label htmlFor="scope">Scope Of Work:</label>
             <input
               type="text"
-              id="timeline"
+              id="scope"
               placeholder="Enter project timeline"
-              value={data.timeline}
+              value={data.scope}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className={styles.inputGroup}>
+            <label htmlFor="category">Category :</label>
+            <input
+              type="text"
+              id="category"
+              placeholder="Enter project category"
+              value={data.category}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className={styles.inputGroup}>
+            <label htmlFor="designedBy">Designed By:</label>
+            <input
+              type="text"
+              id="designedBy"
+              placeholder="Designed By"
+              value={data.designedBy}
               onChange={handleChange}
             />
           </div>
