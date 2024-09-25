@@ -26,6 +26,10 @@ export default function App() {
       <Header />
 
       <Routes>
+        <Route
+          path={"/projects"}
+          element={<ProjectsPage />}
+        />
         {/* home page */}
         {/* <Route
           path={"/"}
@@ -42,10 +46,7 @@ export default function App() {
           element={<ServicesPage />}
         />
 
-        <Route
-          path={"/projects"}
-          element={<ProjectsPage />}
-        />
+        
 
         <Route
           path={"/testimonials"}
