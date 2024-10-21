@@ -5,6 +5,9 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../config/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
 
 const AdminLogin = ({}) => {
   const navigate = useNavigate();
@@ -12,6 +15,7 @@ const AdminLogin = ({}) => {
     username: "",
     password: "",
   });
+  const [isError,setIsError]=useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,12 +25,23 @@ const AdminLogin = ({}) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    if(formData.username == "bikash" && formData.password == "bikash@12"){
-      window.localStorage.setItem("adwikaenterprisescom@23", formData);
+    setIsError("");
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, formData.username, formData.password);
+      console.log("Logged in:", userCredential.user);
+      window.localStorage.setItem()
       navigate("/admin/dashboard");
+    } catch (error) {
+      console.error("Error logging in:", error);
+      setIsError("Failed to log in. Please check your credentials.");
     }
+
+    // if(formData.username == "bikash" && formData.password == "bikash@12"){
+    //   window.localStorage.setItem("adwikaenterprisescom@23", formData);
+    //   navigate("/admin/dashboard");
+    // }
   };
 
   return (
