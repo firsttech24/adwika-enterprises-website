@@ -81,9 +81,10 @@ const AddProjectForm = ({ setProjectAdd }) => {
     // console.log("Form Data:", formData);
     if (imageMessage) {
       try {
+        const data = {...formData,timestamp:Date.now()}
         const valueRef = collection(db, `project`);
         setLoading(true);
-        const result = await addDoc(valueRef, formData);
+        const result = await addDoc(valueRef,data);
         setLoading(false);
         setProjectAdd(false);
       } catch (error) {

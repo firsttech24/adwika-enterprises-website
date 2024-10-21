@@ -34,7 +34,6 @@ const AdminLogin = ({}) => {
         formData.password
       );
       console.log("Logged in:", userCredential.user);
-      // window.localStorage.setItem();
       navigate("/admin/dashboard");
     } catch (error) {
       console.error("Error logging in:", error);
@@ -57,6 +56,7 @@ const AdminLogin = ({}) => {
     >
       <div>
         <h2>Admin Login</h2>
+        {isError && <p>{isError}</p>}
         <form onSubmit={handleSubmit}>
           <TextField
             label="Username"
