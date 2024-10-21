@@ -9,8 +9,11 @@ import {
   getDocs,
   collection,
   doc,
+  onSnapshot,
 } from "firebase/firestore";
 import StickyHeadTable from "./StickyHeadTable.jsx";
+
+
 
 
 const AdminDashBoard = () => {
@@ -24,12 +27,27 @@ const AdminDashBoard = () => {
       ...val.data(),
       id: val.id,
     }));
+
     setProjects(alldata);
   };
 
   useEffect(() => {
-    getProjectsFromFirebase();
+    const unsubscribe = onSnapshot(collection(db, 'project'), (snapshot) => {
+      try {
+        const alldata = snapshot.docs.map((item) => ({
+          ...item.data(), // Call data() method to get the document data
+          id: item.id,
+        }));
+        alldata.sort((a,b)=>b.timeStamp-a.timeStamp)
+        setProjects(alldata);
+      } catch (error) {
+        console.error("Error fetching projects: ", error);
+      }
+    });
+  
+    return () => unsubscribe();
   }, []);
+  
 
   return (
     <div className={styles.dashboard}>
