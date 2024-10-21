@@ -23,7 +23,7 @@ const AdminLogin = ({}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(formData.username == "bikash" && formData.password == "bikash@12"){
+    if (formData.username == "bikash" && formData.password == "bikash@12") {
       window.localStorage.setItem("adwikaenterprisescom@23", formData);
       navigate("/admin/dashboard");
     }
@@ -35,7 +35,8 @@ const AdminLogin = ({}) => {
       alignItems="center"
       justifyContent="center"
       height="60vh"
-      width="100vw">
+      width="100vw"
+    >
       <div>
         <h2>Admin Login</h2>
         <form onSubmit={handleSubmit}>
@@ -62,10 +63,7 @@ const AdminLogin = ({}) => {
             required
           />
 
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary">
+          <Button type="submit" variant="contained" color="primary">
             Submit
           </Button>
         </form>

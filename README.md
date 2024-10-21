@@ -10,3 +10,5 @@ HOME PAGE =>
 8. FOOTER
 
 ABOUT PAGE =>
+
+1. submit admin panel.
